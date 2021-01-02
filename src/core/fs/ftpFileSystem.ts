@@ -144,6 +144,14 @@ export default class FTPFileSystem extends RemoteFileSystem {
   }
 
   async put(input: Readable, path, _option?: FileOption): Promise<void> {
+    try {
+      let stat = await this.lstat(path);
+      if (stat.type === FileType.File)
+        this.atomicDeleteFile(path)
+    } catch {
+      // ignore error
+    }
+
     let inputError: Error | undefined;
     input.once('error', err => {
       inputError = err;
