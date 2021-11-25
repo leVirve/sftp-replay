@@ -1,4 +1,5 @@
 import CustomError from '../customError';
+import { TOTPOptions } from 'otplib/core';
 
 export interface ConnectOption {
   // common
@@ -7,6 +8,8 @@ export interface ConnectOption {
   username?: string;
   password?: string;
   connectTimeout?: number;
+  otpOptions?: TOTPOptions;
+  otpSecret?: string;
   debug(x: string): void;
 
   // ssh-only

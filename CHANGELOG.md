@@ -1,3 +1,6 @@
+## 1.17.1 - 2021-11-25
+* Add experimental TOTP support in FTP auth.
+
 ## 1.17.0 - 2021-11-25
 * Make FTP delete existed file before upload.
 
