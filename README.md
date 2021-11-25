@@ -1,15 +1,11 @@
-# sftp sync extension for VS Code
+# SFTP/FTP RePlay for Visual Studio Code
 
-New version by [@Natizyskunk](https://github.com/Natizyskunk/) that just work 😀 <br>
-(This was originally a fork from [liximomo's SFTP plugin](https://github.com/liximomo/vscode-sftp.git))
-
-- VS Code marketplace : https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp <br>
-- VSIX release : https://github.com/Natizyskunk/vscode-sftp/releases/
+Revise from a fork [Natizyskunk/vscode-sftp](https://github.com/Natizyskunk/vscode-sftp) forked from [liximomo/vscode-sftp](https://github.com/liximomo/vscode-sftp.git)
 
 ---
 
 Syncs your local directory with a remote server directory.
-Allows you to optionally edit upload a file to the remote directory after it saves locally. 
+Allows you to optionally edit upload a file to the remote directory after it saves locally.
 This allows you to edit more or less directly on the server similar to WinScp or other similar programs.
 
 Very powerful, with smart features. Very simple, requires just three lines of config! Very fast, finished in a blink.
@@ -55,15 +51,15 @@ To install it just follow thoses steps from within VSCode :
 
 ## Usage
 If your latest files are on the server, you can start with an empty local folder,
-then download your project, and from that point sync.  
+then download your project, and from that point sync.
 
-1. In `VS Code`, open a local directory you wish to sync to the remote server (or create an empty directory 
-that you wish to first download the contents of a remote server folder in order to edit locally). 
+1. In `VS Code`, open a local directory you wish to sync to the remote server (or create an empty directory
+that you wish to first download the contents of a remote server folder in order to edit locally).
 2. `Ctrl+Shift+P` on Windows/Linux or `Cmd+Shift+P` on Mac open command palette, run `SFTP: config` command.
 3. A basic configuration file will appear named `sftp.json` under the `.vscode` directory.
 Edit the parameters to match your setup.
 
-For instance: 
+For instance:
 ```json
 {
     "name": "Profile Name",
@@ -85,8 +81,8 @@ There are other Example Configs below.
 3. Save and close the `sftp.json` file.
 4. `Ctrl+Shift+P` on Windows/Linux or `Cmd+Shift+P` on Mac open command palette.
 5. Type "sftp" and you'll now see a number of other comands.
-6. A good one to start with if you want to start with a remote folder is `SFTP: Download Project`.  This will download the directory shown in the `remotePath` setting in `sftp.json` to your local open directory. 
-7. Done - you can now edit locally and after each save it will upload to your remote file. 
+6. A good one to start with if you want to start with a remote folder is `SFTP: Download Project`.  This will download the directory shown in the `remotePath` setting in `sftp.json` to your local open directory.
+7. Done - you can now edit locally and after each save it will upload to your remote file.
 8. Enjoy !
 
 For detailed usage. Please go to [wiki](https://github.com/Natizyskunk/vscode-sftp/wiki).
@@ -187,7 +183,7 @@ local -> hop -> target
 {
   "name": "target",
   "remotePath": "/path/in/target",
-  
+
   // hop
   "host": "hopHost",
   "username": "hopUsername",
@@ -285,14 +281,3 @@ _Note：_ You need to manually refresh the parent folder after you **delete** a 
 
 ## FAQ
 You can see all the Frequently Asked Questions [here](./FAQ.md).
-
-## Donation
-If this project helped you reduce development time, you can give me a cup of coffee :)
-
-### Buy Me a Coffee
-[![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png)](https://www.buymeacoffee.com/Natizyskunk)
-
-### PayPal
-<!-- [![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BY89QD47D7MPS&source=url) -->
-[![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/donate?business=DELD7APHHM3BC&no_recurring=0&currency_code=EUR)
-[![PayPal Me](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/natanfourie)
