@@ -1,3 +1,6 @@
+## 1.17.0 - 2021-11-25
+* Make FTP delete existed file before upload.
+
 ## 1.15.14 - 2022-05-06
 * Update npm `async` depedency to v2.6.4.
 * Update npm `minimist` depedency to v1.2.6.
