@@ -1,4 +1,5 @@
 import CustomError from '../customError';
+import OTPOptions from 'otp';
 
 export interface ConnectOption {
   // common
@@ -7,6 +8,7 @@ export interface ConnectOption {
   username?: string;
   password?: string;
   connectTimeout?: number;
+  otpOptions?: OTPOptions;
   debug(x: string): void;
 
   // ssh-only
