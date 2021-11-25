@@ -155,6 +155,15 @@ export default class FTPFileSystem extends RemoteFileSystem {
     });
 
     try {
+      let stat = await this.lstat(path);
+      if (stat.type === FileType.File) {
+        this.atomicDeleteFile(path);
+      }
+    } catch {
+      // ignore error
+    }
+
+    try {
       await this.atomicPut(input, path);
     } catch (error) {
       throw inputError || error;
