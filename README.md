@@ -1,7 +1,6 @@
-# sftp sync extension for VS Code
+# SFTP/FTP RePlay for Visual Studio Code
 
-Fork from version by [@Natizyskunk](https://github.com/Natizyskunk/) that just work 😀 <br>
-(This was originally a fork from [liximomo's SFTP plugin](https://github.com/liximomo/vscode-sftp.git))
+Revise from a fork [Natizyskunk/vscode-sftp](https://github.com/Natizyskunk/vscode-sftp) forked from [liximomo/vscode-sftp](https://github.com/liximomo/vscode-sftp.git)
 
 ---
 

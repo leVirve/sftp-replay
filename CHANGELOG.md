@@ -1,3 +1,9 @@
+## 1.17.0 - 2021-11-25
+* Add TOTP support in FTP auth
+
+## 1.16.0 - 2021-11-25
+* Make FTP delete existed file before upload
+
 ## 1.15.10 - 2021-11-22
 * Update npm `json-schema` devDepedency to v0.2.3.
 
@@ -111,7 +117,7 @@
 ## 1.9.3 - 2019-01-30
   * New icon for RemoteExplorer. Thanks [niccolomineo](https://github.com/niccolomineo) and [jonbp](https://github.com/jonbp).
   * Change `port` to number in the generated config.
-   
+
 ## 1.9.2 - 2019-01-22
   * Fix [#388](https://github.com/liximomo/vscode-sftp/issues/388)
   * Fix [#456](https://github.com/liximomo/vscode-sftp/issues/456)
@@ -207,7 +213,7 @@
   * new [alt commands](https://github.com/liximomo/vscode-sftp#alt-commands) `Force Download` and `Force Upload`. This allow you to download/upload files but disregard ignore rules.
 
 ### Breaking Changes
-  * Rename command `sftp.trans.remote(SFTP: Upload)` to `sftp.upload.activeFile` and command `sftp.trans.local(SFTP: Download)` to `sftp.download.activeFile`. Please update your keybinding if you've used one of these commands. 
+  * Rename command `sftp.trans.remote(SFTP: Upload)` to `sftp.upload.activeFile` and command `sftp.trans.local(SFTP: Download)` to `sftp.download.activeFile`. Please update your keybinding if you've used one of these commands.
 
 ### Deprecated
   * Commands `SFTP: List` and `SFTP: List All` will be removed in favor of `Remote Explorer` in next release.
@@ -229,7 +235,7 @@
 
 ## 1.3.8 - 2018-08-13
 * Fix [#285](https://github.com/liximomo/vscode-sftp/issues/285)
- 
+
 ## 1.3.7 - 2018-08-10
 * Fix bug in remoteExplorer.refresh
 
@@ -296,7 +302,7 @@
 
 
 ## 1.1.0 - 2018-03-13
-* `diff` command. 
+* `diff` command.
 * Fix [#113](https://github.com/liximomo/vscode-sftp/issues/113).
 * Fix [#124](https://github.com/liximomo/vscode-sftp/issues/124).
 
@@ -324,10 +330,10 @@
 🎉🎉🎉This release include some new features, bugfixs and improvements. It may be bring some new bugs, welcome to feedback.
 
 ### New Features
-* `list` and `list all` command. 
+* `list` and `list all` command.
   * `list` will list all remote files except those match your ignore rules.
   * `list all` will list all remote files.
-  
+
   The target will be dowmload after you select. And it will be open in vscode if the target is a file.
 * When you download a folder through a command, the vscode explorer will be refreshed when the command finish.
 
@@ -370,7 +376,7 @@
 * Show a waring to the old `.sftpConfig.json` file.
 
 ### Behaviour Change
-Now `uploadOnSave` only happens on a vscode save opetarion. It used to happen on a disk save opetarion caused by anything. 
+Now `uploadOnSave` only happens on a vscode save opetarion. It used to happen on a disk save opetarion caused by anything.
 
 ## 0.8.5 - 2017-10-18
 ### Improvement

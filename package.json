@@ -1,10 +1,10 @@
 {
-  "name": "sftp",
-  "displayName": "SFTP",
+  "name": "sftp-replay",
+  "displayName": "SFTP RePlay",
   "description": "SFTP/FTP sync",
   "version": "1.17.0",
-  "publisher": "Salas leVirve",
-  "author": "Salas <gae.m.project@gmail.com> (https://github.com/leVirve)",
+  "publisher": "Salas",
+  "author": "Salas leVirve<gae.m.project@gmail.com> (https://github.com/leVirve)",
   "engines": {
     "vscode": "^1.30.0"
   },
