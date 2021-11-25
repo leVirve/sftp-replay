@@ -2,20 +2,20 @@
   "name": "sftp",
   "displayName": "SFTP",
   "description": "SFTP/FTP sync",
-  "version": "1.15.10",
-  "publisher": "Natizyskunk",
-  "author": "Natizyskunk <natan.fourie@hotmail.fr> (https://github.com/Natizyskunk)",
+  "version": "1.16.0",
+  "publisher": "Salas leVirve",
+  "author": "Salas <gae.m.project@gmail.com> (https://github.com/leVirve)",
   "engines": {
     "vscode": "^1.30.0"
   },
   "bugs": {
-    "url": "https://github.com/Natizyskunk/vscode-sftp/issues",
-    "email": "natan.fourie@hotmail.fr"
+    "url": "https://github.com/leVirve/sftp-replay/issues",
+    "email": "gae.m.project@gmail.com"
   },
-  "homepage": "https://github.com/Natizyskunk/vscode-sftp/blob/master/README.md",
+  "homepage": "https://github.com/leVirve/sftp-replay/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Natizyskunk/vscode-sftp.git"
+    "url": "https://github.com/leVirve/sftp-replay.git"
   },
   "license": "MIT",
   "categories": [
