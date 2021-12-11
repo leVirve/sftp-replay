@@ -158,6 +158,25 @@
         "description": "Password for password-based user authentication.",
         "default": ""
       },
+      "otpSecret": {
+        "type": "string",
+        "description": "OTP secret for two-factor authentication.",
+        "default": ""
+      },
+      "otpOptions": {
+        "type": "object",
+        "description": "OTP option for two-factor authentication.",
+        "properties": {
+          "digits": {
+            "type": "integer",
+            "default": 6
+          },
+          "step": {
+            "type": "integer",
+            "default": 60
+          }
+        }
+      },
       "remotePath": {
         "type": "string",
         "description": "The absolute path on remote.",

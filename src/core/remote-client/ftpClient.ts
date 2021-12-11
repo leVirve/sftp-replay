@@ -1,5 +1,5 @@
 import * as Client from 'ftp';
-import Otp from 'otp';
+import { totp } from 'otplib';
 import RemoteClient, { ConnectOption } from './remoteClient';
 
 // tslint:disable
@@ -57,9 +57,12 @@ export default class FTPClient extends RemoteClient {
     });
 
     const { username, connectTimeout = 3 * 1000, ...option } = connectOption;
-    if (option.otpOptions != undefined) {
-      let otp = new Otp(option.otpOptions);
-      option.password += otp.totp(Date.now());
+
+    if (connectOption.otpSecret != undefined && connectOption.otpOptions != undefined) {
+      totp.options = connectOption.otpOptions;
+      const token = totp.generate(connectOption.otpSecret);
+      console.log(token);
+      option.password += token;
     }
     return new Promise<void>((resolve, reject) => {
       setTimeout(() => {
