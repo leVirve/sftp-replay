@@ -25,18 +25,6 @@ function createRemoteFs({ remoteTimeOffsetInHours = 0 } = {}) {
   });
 }
 
-async function runTasks(tasks: TransferTask[]) {
-  return Promise.all(
-    tasks.map(async task => {
-      try {
-        await task.run();
-      } catch (error) {
-        console.log('run task fail', error);
-      }
-    })
-  );
-}
-
 const file = (c, time = 0) => ({
   $$type: 'file',
   content: c,
@@ -274,26 +262,22 @@ describe('transfer algorithm', () => {
       });
       const task: TransferTask[] = [];
       const collect = (a: TransferTask) => task.push(a);
-      let deleted;
-      const runSync = async () => {
-        deleted = await sync(
-          {
-            srcFsPath: '/local',
-            srcFs: localFs,
-            targetFs: remoteFs,
-            targetFsPath: '/remote',
-            transferDirection: TransferDirection.LOCAL_TO_REMOTE,
-            transferOption: {
-              skipCreate: true,
-              delete: false,
-              perserveTargetMode: false,
-            },
+      const deleted = await sync(
+        {
+          srcFsPath: '/local',
+          srcFs: localFs,
+          targetFs: remoteFs,
+          targetFsPath: '/remote',
+          transferDirection: TransferDirection.LOCAL_TO_REMOTE,
+          transferOption: {
+            skipCreate: true,
+            delete: false,
+            perserveTargetMode: false,
           },
-          collect
-        );
-        await runTasks(task);
-      };
-      await runSync();
+        },
+        collect
+      );
+
       expect(task.length).toEqual(1);
       expect(deleted.length).toEqual(0);
       expect(mapList(task, 'targetFsPath').sort()).toEqual(
@@ -301,7 +285,6 @@ describe('transfer algorithm', () => {
       );
       task.length = 0;
       deleted.length = 0;
-      await runSync();
       expect(task.length).toEqual(0);
       expect(deleted.length).toEqual(0);
     });
